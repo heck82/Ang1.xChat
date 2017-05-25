@@ -5,9 +5,9 @@ To start an app just type "node app.js" in command line,
 
 Than open browser on "http://localhost:3000/".
 
-Name and pass "admin"
+Type the name and pass "1111" to enter.
 
-happy chatting !! =))
+Happy chatting !! =))
 
 
 
