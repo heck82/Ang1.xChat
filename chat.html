@@ -1,0 +1,12 @@
+<h1>Welcome to the chat</h1>
+<div ng-controller="ChatController as chatController">
+	<div>
+		<div>
+			<div ng-repeat="message in chatController.messages">{{message.from}}({{message.time}}): {{message.text}}</div>
+		</div>
+		<div>
+			<input type="text" placeholder="type your message" ng-model="chatController.newMessage">
+			<button ng-click="chatController.sendMessage(chatController.newMessage)">send</button>
+		</div>
+	</div>
+</div>
