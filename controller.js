@@ -19,9 +19,13 @@ app.config(function($routeProvider){
 		redirectTo: "/login"
 	});
 });
+
+var user = {};
+
 app.controller('logCtrl', function($scope, $location, $rootScope){
 	$scope.submit = function(){
-		if($scope.username =="admin" && $scope.password == "admin"){
+		if($scope.password == "1111"){
+			user.name = $scope.username;
 			$rootScope.login = true;
 			$location.path("/");
 		}else{
@@ -32,7 +36,7 @@ app.controller('logCtrl', function($scope, $location, $rootScope){
 
 app.controller('ChatController', function($interval){
 	this.messages = [];
-	this.sendAs = "PreatyPuppy";
+	this.sendAs = user.name;
 	this.sendMessage = function(message){
 		var messageData = {
 			from: this.sendAs,
